@@ -4,280 +4,276 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Recetario Pan Sin Gluten | Chef Jenny Camacho</title>
-    
-    <style>
-        /* =========================================
-           VARIABLES DE COLOR Y ESTILOS BASE
-           ========================================= */
-        :root {
-            --bg-cream: #ede7d4;
-            --bg-pink: #f6ccda;
-            --text-dark: #452c29;
-            --heading-green: #2d371d;
-            --accent-lime: #d8df80;
-            --cta-magenta: #8c2e66;
-            --cta-hover: #702552;
-            
-            --font-main: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-        }
-
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        body {
-            font-family: var(--font-main);
-            background-color: var(--bg-cream);
-            color: var(--text-dark);
-            line-height: 1.6;
-            font-size: 16px;
-        }
-
-        .container {
-            max-width: 900px;
-            margin: 0 auto;
-            padding: 0 20px;
-        }
-
-        img {
-            max-width: 100%;
-            height: auto;
-            border-radius: 8px;
-        }
-
-        /* =========================================
-           TIPOGRAFÍA
-           ========================================= */
-        h1, h2, h3 {
-            color: var(--heading-green);
-            line-height: 1.2;
-            margin-bottom: 20px;
-            text-align: center;
-        }
-
-        h1 {
-            font-size: 2.5rem;
-            font-weight: 800;
-            text-transform: uppercase;
-        }
-
-        h2 {
-            font-size: 2rem;
-            margin-top: 40px;
-        }
-
-        p {
-            margin-bottom: 15px;
-            text-align: center;
-        }
-
-        /* =========================================
-           BOTONES (CTA)
-           ========================================= */
-        .btn {
-            display: block;
-            width: 100%;
-            max-width: 450px;
-            margin: 30px auto;
-            padding: 18px 20px;
-            background-color: var(--cta-magenta);
-            color: #ffffff;
-            text-align: center;
-            text-decoration: none;
-            font-size: 1.2rem;
-            font-weight: bold;
-            border-radius: 50px;
-            text-transform: uppercase;
-            box-shadow: 0 6px 15px rgba(140, 46, 102, 0.4);
-            transition: all 0.3s ease;
-            animation: pulse 2s infinite;
-        }
-
-        .btn:hover {
-            background-color: var(--cta-hover);
-            transform: translateY(-2px);
-        }
-
-        @keyframes pulse {
-            0% { transform: scale(1); }
-            50% { transform: scale(1.02); }
-            100% { transform: scale(1); }
-        }
-
-        /* =========================================
-           SECCIONES Y TARJETAS
-           ========================================= */
-        section {
-            padding: 60px 0;
-        }
-
-        .bg-pink {
-            background-color: var(--bg-pink);
-        }
-
-        .bullet-list li {
-            margin-bottom: 15px;
-            padding-left: 35px;
-            position: relative;
-            font-weight: 500;
-        }
-
-            /* 1. Ajuste para darle más anchura y respiración a la caja blanca */
-.bg-white {
-    background-color: #ffffff;
-    border-radius: 12px;
-    padding: 50px 60px; /* Aumentamos el espacio interior horizontal para que no se pegue al borde */
-    box-shadow: 0 4px 10px rgba(0,0,0,0.05);
-    margin: 40px auto; /* Asegura que la caja se centre */
-    max-width: 850px; /* Le da un tope de ancho muy limpio */
-}
-
-/* 2. Ajuste para centrar la lista de "Este recetario es para ti si..." */
-.bullet-list {
-    list-style: none;
-    margin: 30px auto; /* 'auto' centra el bloque completo en medio de la pantalla */
-    max-width: 700px; /* Restringe el ancho para que el texto no se estire de extremo a extremo */
-    text-align: left; /* Mantiene la viñeta fácil de leer */
-}
-
-/* 3. Ajuste para centrar el bloque de Preguntas Frecuentes */
-.faq-container {
-    max-width: 750px; /* Controla el ancho del acordeón */
-    margin: 0 auto; /* Centra todo el acordeón perfectamente debajo del título */
-}
-
-/* 4. Ajuste responsivo: Añade esto DENTRO de tu @media (max-width: 600px) 
-      para que en móviles no quede demasiado apretado por el nuevo padding */
-@media (max-width: 600px) {
-    .bg-white {
-        padding: 30px 20px; /* Restaura el padding pequeño para celulares */
-    }
-}
+            <style>
+    /* =========================================
+       VARIABLES DE COLOR Y ESTILOS BASE
+       ========================================= */
+    :root {
+        --bg-cream: #ede7d4;
+        --bg-pink: #f6ccda;
+        --text-dark: #452c29;
+        --heading-green: #2d371d;
+        --accent-lime: #d8df80;
+        --cta-magenta: #8c2e66;
+        --cta-hover: #702552;
         
-        .bullet-list li::before {
-            content: '✔';
-            position: absolute;
-            left: 0;
-            top: 0;
-            color: var(--heading-green);
-            background-color: var(--accent-lime);
-            width: 24px;
-            height: 24px;
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 14px;
-        }
+        --font-main: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
 
-        /* Testimonios */
-        .testimonial-card {
-            background: #fff;
-            border-left: 5px solid var(--accent-lime);
-            padding: 20px;
-            border-radius: 8px;
-            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
-            margin-bottom: 20px;
-            text-align: left;
-            font-style: italic;
-            color: var(--text-dark);
-        }
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
 
-        .testimonial-author {
-            font-weight: bold;
-            font-style: normal;
-            margin-top: 10px;
-            font-size: 0.9rem;
-            color: var(--heading-green);
-        }
+    body {
+        font-family: var(--font-main);
+        background-color: var(--bg-cream);
+        color: var(--text-dark);
+        line-height: 1.6;
+        font-size: 16px;
+    }
 
-        /* Tabla de Precios/Bonos */
-        .price-box {
-            border: 3px solid var(--accent-lime);
-            border-radius: 12px;
-            padding: 30px;
-            text-align: center;
-            background: #fff;
-        }
+    .container {
+        max-width: 900px;
+        margin: 0 auto;
+        padding: 0 20px;
+    }
 
-        .price-box .old-price {
-            text-decoration: line-through;
-            color: #888;
-            font-size: 1.5rem;
-        }
+    img {
+        max-width: 100%;
+        height: auto;
+        border-radius: 8px;
+    }
 
-        .price-box .new-price {
-            color: var(--cta-magenta);
-            font-size: 3.5rem;
-            font-weight: 900;
-            line-height: 1;
-            margin: 10px 0;
-        }
+    /* =========================================
+       TIPOGRAFÍA
+       ========================================= */
+    h1, h2, h3 {
+        color: var(--heading-green);
+        line-height: 1.2;
+        margin-bottom: 20px;
+        text-align: center;
+    }
 
-        /* Acordeón FAQ */
-        .faq-item {
-            border-bottom: 1px solid #ccc;
-            margin-bottom: 10px;
-        }
-        .faq-question {
-            width: 100%;
-            text-align: left;
-            padding: 15px 0;
-            background: none;
-            border: none;
-            font-size: 1.1rem;
-            font-weight: bold;
-            color: var(--heading-green);
-            cursor: pointer;
-            display: flex;
-            justify-content: space-between;
-        }
-        .faq-answer {
-            max-height: 0;
-            overflow: hidden;
-            transition: max-height 0.3s ease;
-            text-align: left;
-        }
-        .faq-answer p {
-            padding-bottom: 15px;
-            text-align: left;
-        }
+    h1 {
+        font-size: 2.5rem;
+        font-weight: 800;
+        text-transform: uppercase;
+    }
 
-        /* Estilos específicos para optimización de imágenes */
+    h2 {
+        font-size: 2rem;
+        margin-top: 40px;
+    }
+
+    p {
+        margin-bottom: 15px;
+        text-align: center;
+    }
+
+    /* =========================================
+       BOTONES (CTA)
+       ========================================= */
+    .btn {
+        display: block;
+        width: 100%;
+        max-width: 450px;
+        margin: 30px auto;
+        padding: 18px 20px;
+        background-color: var(--cta-magenta);
+        color: #ffffff;
+        text-align: center;
+        text-decoration: none;
+        font-size: 1.2rem;
+        font-weight: bold;
+        border-radius: 50px;
+        text-transform: uppercase;
+        box-shadow: 0 6px 15px rgba(140, 46, 102, 0.4);
+        transition: all 0.3s ease;
+        animation: pulse 2s infinite;
+    }
+
+    .btn:hover {
+        background-color: var(--cta-hover);
+        transform: translateY(-2px);
+    }
+
+    @keyframes pulse {
+        0% { transform: scale(1); }
+        50% { transform: scale(1.02); }
+        100% { transform: scale(1); }
+    }
+
+    /* =========================================
+       SECCIONES Y TARJETAS
+       ========================================= */
+    section {
+        padding: 60px 0;
+    }
+
+    .bg-pink {
+        background-color: var(--bg-pink);
+    }
+
+    .bg-white {
+        background-color: #ffffff;
+        border-radius: 12px;
+        padding: 50px 60px; /* Aumentamos el espacio interior horizontal */
+        box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+        margin: 40px auto; /* Asegura que la caja se centre */
+        max-width: 850px; /* Le da un tope de ancho muy limpio */
+    }
+
+    /* Listas y viñetas */
+    .bullet-list {
+        list-style: none;
+        margin: 30px auto; /* Centra el bloque completo */
+        max-width: 700px; /* Restringe el ancho */
+        text-align: left; /* Mantiene la viñeta fácil de leer */
+    }
+
+    .bullet-list li {
+        margin-bottom: 15px;
+        padding-left: 35px;
+        position: relative;
+        font-weight: 500;
+    }
+
+    .bullet-list li::before {
+        content: '✔';
+        position: absolute;
+        left: 0;
+        top: 0;
+        color: var(--heading-green);
+        background-color: var(--accent-lime);
+        width: 24px;
+        height: 24px;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 14px;
+    }
+
+    /* Testimonios */
+    .testimonial-card {
+        background: #fff;
+        border-left: 5px solid var(--accent-lime);
+        padding: 20px;
+        border-radius: 8px;
+        box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+        margin-bottom: 20px;
+        text-align: left;
+        font-style: italic;
+        color: var(--text-dark);
+    }
+
+    .testimonial-author {
+        font-weight: bold;
+        font-style: normal;
+        margin-top: 10px;
+        font-size: 0.9rem;
+        color: var(--heading-green);
+    }
+
+    /* Tabla de Precios/Bonos */
+    .price-box {
+        border: 3px solid var(--accent-lime);
+        border-radius: 12px;
+        padding: 30px;
+        text-align: center;
+        background: #fff;
+    }
+
+    .price-box .old-price {
+        text-decoration: line-through;
+        color: #888;
+        font-size: 1.5rem;
+    }
+
+    .price-box .new-price {
+        color: var(--cta-magenta);
+        font-size: 3.5rem;
+        font-weight: 900;
+        line-height: 1;
+        margin: 10px 0;
+    }
+
+    /* Acordeón FAQ */
+    .faq-container {
+        max-width: 750px; /* Controla el ancho del acordeón */
+        margin: 0 auto; /* Centra todo el acordeón perfectamente debajo del título */
+    }
+
+    .faq-item {
+        border-bottom: 1px solid #ccc;
+        margin-bottom: 10px;
+    }
+    .faq-question {
+        width: 100%;
+        text-align: left;
+        padding: 15px 0;
+        background: none;
+        border: none;
+        font-size: 1.1rem;
+        font-weight: bold;
+        color: var(--heading-green);
+        cursor: pointer;
+        display: flex;
+        justify-content: space-between;
+    }
+    .faq-answer {
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.3s ease;
+        text-align: left;
+    }
+    .faq-answer p {
+        padding-bottom: 15px;
+        text-align: left;
+    }
+
+    /* Estilos específicos para optimización de imágenes */
+    .img-hero {
+        width: 100%;
+        max-width: 480px; 
+        aspect-ratio: 960 / 1280;
+        object-fit: cover;
+        display: block;
+        margin: 0 auto 20px;
+        border-radius: 15px;
+        box-shadow: 0 8px 20px rgba(69, 44, 41, 0.15);
+    }
+
+    .img-autoridad {
+        width: 100%;
+        max-width: 400px;
+        aspect-ratio: 1 / 1; 
+        object-fit: cover;
+        display: block;
+        margin: 0 auto 20px;
+        border-radius: 15px;
+        box-shadow: 0 8px 20px rgba(69, 44, 41, 0.1);
+    }
+
+    /* =========================================
+       AJUSTES RESPONSIVOS (MÓVILES)
+       ========================================= */
+    @media (max-width: 600px) {
+        .bg-white {
+            padding: 30px 20px; /* Restaura el padding pequeño para celulares */
+        }
         .img-hero {
-            width: 100%;
-            max-width: 480px; 
-            aspect-ratio: 960 / 1280;
-            object-fit: cover;
-            display: block;
-            margin: 0 auto 20px;
-            border-radius: 15px;
-            box-shadow: 0 8px 20px rgba(69, 44, 41, 0.15);
+            max-width: 100%; 
+            border-radius: 10px;
         }
-
         .img-autoridad {
-            width: 100%;
-            max-width: 400px;
-            aspect-ratio: 1 / 1; 
-            object-fit: cover;
-            display: block;
-            margin: 0 auto 20px;
-            border-radius: 15px;
-            box-shadow: 0 8px 20px rgba(69, 44, 41, 0.1);
+            max-width: 280px; 
         }
-
-        @media (max-width: 600px) {
-            .img-hero {
-                max-width: 100%; 
-                border-radius: 10px;
-            }
-            .img-autoridad {
-                max-width: 280px; 
-            }
-        }
-    </style>
+    }
+</style>
+            
 </head>
 <body>
 
