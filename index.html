@@ -79,7 +79,7 @@
         .btn {
             display: block;
             width: 100%;
-            max-width: 400px;
+            max-width: 450px;
             margin: 30px auto;
             padding: 18px 20px;
             background-color: var(--cta-magenta);
@@ -107,7 +107,7 @@
         }
 
         /* =========================================
-           SECCIONES
+           SECCIONES Y TARJETAS
            ========================================= */
         section {
             padding: 60px 0;
@@ -153,6 +153,27 @@
             align-items: center;
             justify-content: center;
             font-size: 14px;
+        }
+
+        /* Testimonios */
+        .testimonial-card {
+            background: #fff;
+            border-left: 5px solid var(--accent-lime);
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+            margin-bottom: 20px;
+            text-align: left;
+            font-style: italic;
+            color: var(--text-dark);
+        }
+
+        .testimonial-author {
+            font-weight: bold;
+            font-style: normal;
+            margin-top: 10px;
+            font-size: 0.9rem;
+            color: var(--heading-green);
         }
 
         /* Tabla de Precios/Bonos */
@@ -208,38 +229,37 @@
         }
 
         /* Estilos específicos para optimización de imágenes */
-    .img-hero {
-        width: 100%;
-        max-width: 480px; /* Evita que la imagen vertical sea demasiado alta en desktop */
-        aspect-ratio: 960 / 1280;
-        object-fit: cover;
-        display: block;
-        margin: 0 auto 20px;
-        border-radius: 15px;
-        box-shadow: 0 8px 20px rgba(69, 44, 41, 0.15);
-    }
-
-    .img-autoridad {
-        width: 100%;
-        max-width: 400px;
-        aspect-ratio: 1 / 1; /* Mantiene el formato cuadrado perfecto */
-        object-fit: cover;
-        display: block;
-        margin: 0 auto 20px;
-        border-radius: 15px;
-        box-shadow: 0 8px 20px rgba(69, 44, 41, 0.1);
+        .img-hero {
+            width: 100%;
+            max-width: 480px; 
+            aspect-ratio: 960 / 1280;
+            object-fit: cover;
+            display: block;
+            margin: 0 auto 20px;
+            border-radius: 15px;
+            box-shadow: 0 8px 20px rgba(69, 44, 41, 0.15);
         }
 
-    /* Ajuste fino para móviles */
-    @media (max-width: 600px) {
-    .img-hero {
-        max-width: 100%; 
-        border-radius: 10px;
+        .img-autoridad {
+            width: 100%;
+            max-width: 400px;
+            aspect-ratio: 1 / 1; 
+            object-fit: cover;
+            display: block;
+            margin: 0 auto 20px;
+            border-radius: 15px;
+            box-shadow: 0 8px 20px rgba(69, 44, 41, 0.1);
         }
-    .img-autoridad {
-        max-width: 280px; /* Tamaño ideal para que no rompa el flujo de lectura en móvil */
+
+        @media (max-width: 600px) {
+            .img-hero {
+                max-width: 100%; 
+                border-radius: 10px;
+            }
+            .img-autoridad {
+                max-width: 280px; 
+            }
         }
-    }
     </style>
 </head>
 <body>
@@ -249,11 +269,11 @@
         <p style="font-size: 1.2rem; margin-bottom: 30px;">Un recetario saludable para preparar en casa opciones dulces, horneadas y prácticas que sí dan ganas de comer, compartir y repetir.</p>
         
         <div style="text-align: center; margin-bottom: 20px;">
-        <img src="recursos/jenny-cafe.jpg" alt="Chef Jenny Camacho disfrutando un postre" class="img-hero">
-    </div>
+            <img src="recursos/jenny-cafe.jpg" alt="Chef Jenny Camacho disfrutando un postre" class="img-hero">
+        </div>
         
         <p style="font-weight: bold; font-size: 1.2rem; color: var(--cta-magenta);">Más disfrute. Más variedad. Más posibilidades en casa.</p>
-    </header>
+        </header>
 
     <section class="bg-pink">
         <div class="container bg-white">
@@ -270,17 +290,23 @@
 
     <section class="container">
         <h2>LO QUE ENCUENTRAS DENTRO DEL RECETARIO</h2>
-        <p>No solo aprenderás a cocinar para ti; aprenderás a poner un pan en la mesa que toda tu familia quiera comer, aunque ellos no tengan restricciones alimentarias.</p>
+        
+        <div class="bg-white">
+            <h3 style="color: var(--cta-magenta);">LO QUE HACE VALIOSA ESTA OFERTA</h3>
+            <p style="text-align: left; font-weight: 500;">No es una sola receta aislada. Es un conjunto de preparaciones reales para que el sin gluten se sienta más rico, más amplio y más posible en casa.</p>
+            <p style="text-align: left; font-weight: 500;">No solo aprenderás a cocinar para ti; aprenderás a poner un pan en la mesa que <strong>toda tu familia quiera comer</strong>, aunque ellos no tengan restricciones alimentarias.</p>
+            <p style="text-align: left; font-weight: 500;">Aquí la experiencia no gira alrededor de la carencia, sino del antojo, la variedad y el disfrute.</p>
+        </div>
         
         <div class="bg-white" style="border-top: 8px solid var(--accent-lime);">
             <h3 style="text-align: left;">🥐 Recetas de Panadería Dulce</h3>
-            <p style="text-align: left;">El placer de volver a comer un rol de canela caliente: Roles de canela, Pan relleno de chocolate, Donas.</p>
+            <p style="text-align: left;"><strong>El placer de volver a comer un rol de canela caliente.</strong><br> Incluye: Roles de canela · Pan relleno de chocolate · Donas.</p>
             
             <h3 style="text-align: left; margin-top: 20px;">🍞 Base de Panes Salados</h3>
-            <p style="text-align: left;">Tu solución definitiva para sándwiches y desayunos: Pan maíz auyama, Pan nube, Pan mini baguette, Pan molde linaza, Pan yuca, Pan mogolla.</p>
+            <p style="text-align: left;"><strong>Tu solución definitiva para sándwiches y desayunos.</strong><br> Incluye: Pan maíz auyama · Pan nube · Pan mini · Pan molde · Pan yuca · Pan mogolla.</p>
             
             <h3 style="text-align: left; margin-top: 20px;">🧁 Extras y Desayunos</h3>
-            <p style="text-align: left;">El sistema para no volver a aburrirte en la cocina: Cupcakes pollitos de Pascua, Mini pizzas dulces, Galletas de zapallo con chips, Batido de aguacate, Jugo verde, Arepa de zanahoria con chía.</p>
+            <p style="text-align: left;"><strong>El sistema para no volver a aburrirte en la cocina.</strong><br> Incluye: Cupcakes · Mini pizzas dulces · Galletas de zapallo · Batido de aguacate · Jugo verde · Arepa de zanahoria con chía.</p>
         </div>
     </section>
 
@@ -290,11 +316,10 @@
             
             <div class="bg-white">
                 <h3 style="color: var(--cta-magenta);">🎁 Bono 1: Planificador Semanal Sin Gluten</h3>
-                <p>Organiza tus horneados en 1 hora. Ideal si sientes que no tienes tiempo.</p>
-                
+                <p><strong>Organiza tus horneados en 1 hora.</strong> Ideal si sientes que no tienes tiempo en tu día a día.</p>
                 <h3 style="color: var(--cta-magenta); margin-top: 30px;">🎁 Bono 2: Video-Clase Especial</h3>
-                <p>El secreto para que tus preparaciones queden perfectas siempre, perdiendo el miedo a fallar.</p>
-            </div>
+                <p><strong>El secreto para que tus preparaciones queden perfectas siempre.</strong> Pierde el miedo a fallar con las masas sin gluten.</p>
+                </div>
 
             <div class="price-box">
                 <p>VALOR TOTAL SI LO ADQUIRIERAS TODO POR SEPARADO: <span class="old-price">$127 USD</span></p>
@@ -302,7 +327,7 @@
                 <div class="new-price">$3 USD</div>
                 <p style="font-weight: bold;">(ACCESO DE POR VIDA)</p>
                 
-                <p style="margin-top: 20px; font-style: italic;">“Quiero que el costo no sea una barrera para que vuelvas a disfrutar del pan en tu mesa. Este es mi regalo para que conozcas mi método.”</p>
+                <p style="margin-top: 20px; font-style: italic; color: var(--cta-hover);">“Quiero que el costo no sea una barrera para que vuelvas a disfrutar del pan en tu mesa. Este es mi regalo para que conozcas mi método.”</p>
                 
                 <a href="#link-de-pago" class="btn">SÍ, QUIERO ENTRAR HOY</a>
             </div>
@@ -310,62 +335,93 @@
     </section>
 
     <section class="container text-center">
-        <h2>🛡️ GARANTÍA INCONDICIONAL</h2>
-        <p>Tienes 7 días para probar estas recetas. Si sientes que el pan no queda suave, que las opciones no son deliciosas o simplemente no es lo que esperabas, te devolvemos el 100% de tu dinero. Sin preguntas.</p>
+        <h2>🛡️ GARANTÍA INCONDICIONAL DE 7 DÍAS</h2>
+        <p>Tienes 7 días para acceder al material y probar estas recetas en tu cocina. Si sientes que el pan no queda suave, que las opciones no son deliciosas o simplemente no es lo que esperabas, te devolvemos el 100% de tu dinero. Sin preguntas, sin riesgos.</p>
     </section>
 
     <section class="bg-pink">
-        <div class="container bg-white">
+        <div class="container">
+            <h2>ELLAS YA ESTÁN DISFRUTANDO EN CASA</h2>
+            <div class="testimonial-card">
+                <p>"Pensé que nunca volvería a comerme un buen pan para el desayuno. Las recetas son súper fáciles de seguir y mi esposo (que no hace dieta) se las devora."</p>
+                <p class="testimonial-author">⭐⭐⭐⭐⭐ - Alumna del recetario</p>
+            </div>
+            <div class="testimonial-card">
+                <p>"Hice los roles de canela y no podía creer que no tuvieran gluten. Por fin puedo darle a mis hijos algo dulce sin culpa y sin que sepan a cartón."</p>
+                <p class="testimonial-author">⭐⭐⭐⭐⭐ - Alumna del recetario</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="container">
+        <div class="bg-white" style="margin-top: 0;">
             <h2>¿CON QUIÉN VAS A APRENDER?</h2>
+            
             <div style="text-align: center; margin-bottom: 20px;">
                 <img src="recursos/jenny-cocina.jpg" alt="Chef Jenny Camacho en la cocina" class="img-autoridad">
             </div>
-            <p><strong>¡Hola! Soy Jenny Camacho</strong></p>
-            <p>Nací en Venezuela y desde chica descubrí mi amor por la cocina. Al mudarme a Colombia, enfrenté desafíos que fortalecieron mi enfoque: llevar salud a través de postres.</p>
-            <p>Me especialicé en pastelería saludable y, tras más de 10 años de experiencia, fundé Xocolat And More... Hoy es una cadena que demuestra que lo delicioso también puede ser nutritivo.</p>
-            <p>Pero esta misión también es personal. Mi papá vive con diabetes, mi hijo luchó con sobrepeso y yo misma enfrenté el cáncer de mama. Todo esto me dio una visión clara: comer bien puede cambiarte la vida.</p>
-            <p>Mujeres que le decimos con orgullo sí es posible disfrutar sin culpa, cuidar nuestra salud y compartirlo con quienes amamos.</p>
+            
+            <h3 style="color: var(--cta-magenta);">¡Hola! Soy Jenny Camacho</h3>
+            <p style="text-align: left;">Nací en Venezuela y desde chica descubrí mi amor por la cocina. Al mudarme a Colombia, enfrenté desafíos que fortalecieron mi enfoque: llevar salud a través de postres.</p>
+            <p style="text-align: left;">Me especialicé en pastelería saludable y, tras más de 10 años de experiencia, fundé Xocolat And More, con sedes en Colombia y Venezuela. Hoy es una cadena que demuestra que lo delicioso también puede ser nutritivo.</p>
+            <p style="text-align: left;">Pero esta misión también es personal. Mi papá vive con diabetes, mi hijo luchó con sobrepeso y yo misma enfrenté el cáncer de mama. Todo esto me dio una visión clara: comer bien puede cambiarte la vida.</p>
+            <p style="text-align: left;">Así nació este ebook: una guía práctica y poderosa para que más mujeres descubran que sí es posible crear postres saludables, deliciosos y sin frustración.</p>
+            <p style="text-align: left;">Hoy, juntas, estamos creando un movimiento de mujeres embajadoras de la cocina saludable. Mujeres que le decimos con orgullo sí es posible disfrutar sin culpa, cuidar nuestra salud y compartirlo con quienes amamos.</p>
             
             <a href="#link-de-pago" class="btn">¡ESTOY LISTA PARA COCINAR SALUDABLE SIN FALLAR DESDE HOY!</a>
         </div>
     </section>
 
-    <section class="container">
-        <h2>PREGUNTAS FRECUENTES</h2>
-        
-        <div class="faq-container">
-            <div class="faq-item">
-                <button class="faq-question">¿Este recetario es digital? <span>+</span></button>
-                <div class="faq-answer">
-                    <p>Sí, es un producto 100% digital. Recibirás el acceso a tu correo electrónico inmediatamente después de la compra.</p>
+    <section class="bg-pink">
+        <div class="container bg-white">
+            <h2>PREGUNTAS FRECUENTES</h2>
+            
+            <div class="faq-container">
+                <div class="faq-item">
+                    <button class="faq-question">¿Este recetario es digital? <span>+</span></button>
+                    <div class="faq-answer">
+                        <p>Sí, es un producto 100% digital en formato PDF. Recibirás el acceso a tu correo electrónico inmediatamente después de la compra para descargarlo y usarlo al instante.</p>
+                    </div>
                 </div>
-            </div>
-            <div class="faq-item">
-                <button class="faq-question">¿Por cuánto tiempo lo tendré? <span>+</span></button>
-                <div class="faq-answer">
-                    <p>¡El acceso es de por vida! Podrás consultarlo siempre que quieras, desde cualquier dispositivo.</p>
+                <div class="faq-item">
+                    <button class="faq-question">¿Por cuánto tiempo lo tendré? <span>+</span></button>
+                    <div class="faq-answer">
+                        <p>¡El acceso es de por vida! Podrás consultarlo siempre que quieras, desde tu celular, tablet o computadora.</p>
+                    </div>
                 </div>
-            </div>
-            <div class="faq-item">
-                <button class="faq-question">¿Necesito experiencia previa? <span>+</span></button>
-                <div class="faq-answer">
-                    <p>No, las recetas están explicadas paso a paso para que cualquier persona pueda lograr resultados deliciosos en casa.</p>
+                <div class="faq-item">
+                    <button class="faq-question">¿Necesito experiencia previa? <span>+</span></button>
+                    <div class="faq-answer">
+                        <p>No, en absoluto. Las recetas están explicadas paso a paso de forma sencilla para que cualquier persona, sin importar su nivel en la cocina, pueda lograr resultados deliciosos.</p>
+                    </div>
                 </div>
-            </div>
-            <div class="faq-item">
-                <button class="faq-question">¿Los ingredientes son fáciles de conseguir? <span>+</span></button>
-                <div class="faq-answer">
-                    <p>Absolutamente. Utilizamos ingredientes accesibles que puedes encontrar en supermercados o tiendas naturales locales.</p>
+                <div class="faq-item">
+                    <button class="faq-question">¿Los ingredientes son fáciles de conseguir? <span>+</span></button>
+                    <div class="faq-answer">
+                        <p>Absolutamente. Utilizamos ingredientes accesibles que puedes encontrar en supermercados convencionales o tiendas naturales locales, sin complicarte la vida.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-question">¿Incluye solo panes o también otras preparaciones? <span>+</span></button>
+                    <div class="faq-answer">
+                        <p>¡Es un recetario muy completo! Además de panes salados base, incluye opciones de panadería dulce (como donas y roles de canela), extras como galletas, y hasta opciones de desayunos rápidos y saludables.</p>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <footer class="bg-pink" style="padding: 60px 0; text-align: center;">
+    <footer style="padding: 60px 0; text-align: center;">
         <div class="container">
-            <h2 style="margin-top: 0;">Pan sin gluten que sí se antoja.</h2>
-            <p style="font-size: 1.2rem; font-weight: bold;">Hecho para disfrutar en casa.</p>
-            <a href="#link-de-pago" class="btn">SÍ, QUIERO MI RECETARIO</a>
+            <div style="margin-bottom: 40px;">
+                <p style="font-style: italic; color: #888;">[ Aquí puedes añadir más imágenes de resultados / capturas ]</p>
+            </div>
+
+            <h2 style="margin-top: 0; color: var(--cta-magenta); font-size: 2.5rem;">Pan sin gluten que sí se antoja.</h2>
+            <p style="font-size: 1.5rem; font-weight: bold;">Hecho para disfrutar en casa.</p>
+            <a href="#link-de-pago" class="btn" style="margin-top: 40px;">SÍ, QUIERO MI RECETARIO</a>
+            
+            <p style="margin-top: 40px; font-size: 0.8rem; color: #888;">&copy; 2026 Chef Jenny Camacho. Todos los derechos reservados.</p>
         </div>
     </footer>
 
@@ -379,7 +435,7 @@
                     answer.style.maxHeight = null;
                     icon.textContent = '+';
                 } else {
-                    // Cierra los demás
+                    // Cierra los demás acordeones al abrir uno nuevo
                     document.querySelectorAll('.faq-answer').forEach(ans => ans.style.maxHeight = null);
                     document.querySelectorAll('.faq-question span').forEach(icn => icn.textContent = '+');
                     
