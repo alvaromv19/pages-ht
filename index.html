@@ -206,6 +206,40 @@
             padding-bottom: 15px;
             text-align: left;
         }
+
+        /* Estilos específicos para optimización de imágenes */
+    .img-hero {
+        width: 100%;
+        max-width: 480px; /* Evita que la imagen vertical sea demasiado alta en desktop */
+        aspect-ratio: 960 / 1280;
+        object-fit: cover;
+        display: block;
+        margin: 0 auto 20px;
+        border-radius: 15px;
+        box-shadow: 0 8px 20px rgba(69, 44, 41, 0.15);
+    }
+
+    .img-autoridad {
+        width: 100%;
+        max-width: 400px;
+        aspect-ratio: 1 / 1; /* Mantiene el formato cuadrado perfecto */
+        object-fit: cover;
+        display: block;
+        margin: 0 auto 20px;
+        border-radius: 15px;
+        box-shadow: 0 8px 20px rgba(69, 44, 41, 0.1);
+        }
+
+    /* Ajuste fino para móviles */
+    @media (max-width: 600px) {
+    .img-hero {
+        max-width: 100%; 
+        border-radius: 10px;
+        }
+    .img-autoridad {
+        max-width: 280px; /* Tamaño ideal para que no rompa el flujo de lectura en móvil */
+        }
+    }
     </style>
 </head>
 <body>
@@ -215,8 +249,8 @@
         <p style="font-size: 1.2rem; margin-bottom: 30px;">Un recetario saludable para preparar en casa opciones dulces, horneadas y prácticas que sí dan ganas de comer, compartir y repetir.</p>
         
         <div style="text-align: center; margin-bottom: 20px;">
-            <img src="URL_IMAGEN_JENNY_CAFE.jpg" alt="Chef Jenny Camacho disfrutando un postre" style="max-width: 100%; border-radius: 12px;">
-        </div>
+        <img src="recursos/jenny-cafe.jpg" alt="Chef Jenny Camacho disfrutando un postre" class="img-hero">
+    </div>
         
         <p style="font-weight: bold; font-size: 1.2rem; color: var(--cta-magenta);">Más disfrute. Más variedad. Más posibilidades en casa.</p>
     </header>
@@ -284,7 +318,7 @@
         <div class="container bg-white">
             <h2>¿CON QUIÉN VAS A APRENDER?</h2>
             <div style="text-align: center; margin-bottom: 20px;">
-                <img src="URL_IMAGEN_JENNY_COCINA.jpg" alt="Chef Jenny Camacho en la cocina">
+                <img src="recursos/jenny-cocina.jpg" alt="Chef Jenny Camacho en la cocina" class="img-autoridad">
             </div>
             <p><strong>¡Hola! Soy Jenny Camacho</strong></p>
             <p>Nací en Venezuela y desde chica descubrí mi amor por la cocina. Al mudarme a Colombia, enfrenté desafíos que fortalecieron mi enfoque: llevar salud a través de postres.</p>
