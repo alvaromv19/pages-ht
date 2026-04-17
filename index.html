@@ -47,7 +47,7 @@
     }
 
     /* =========================================
-       TIPOGRAFÍA
+       TIPOGRAFÍA PREMIUM Y ANIMADA
        ========================================= */
     h1, h2, h3 {
         color: var(--heading-green);
@@ -57,14 +57,37 @@
     }
 
     h1 {
-        font-size: 2.5rem;
-        font-weight: 800;
+        font-size: 2.8rem; /* Un poco más imponente */
+        font-weight: 900;
         text-transform: uppercase;
+        letter-spacing: -1px;
+        text-shadow: 2px 5px 12px rgba(69, 44, 41, 0.15); /* Sombra que le da relieve */
     }
 
     h2 {
-        font-size: 2rem;
+        font-size: 2.2rem;
         margin-top: 40px;
+        position: relative;
+        padding-bottom: 15px; /* Espacio para la línea animada */
+    }
+
+    /* La línea animada debajo de los títulos */
+    h2::after {
+        content: '';
+        position: absolute;
+        bottom: 0;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 30px; /* Inicia muy pequeña, casi como un punto */
+        height: 4px;
+        background-color: var(--accent-lime);
+        border-radius: 4px;
+        transition: width 1s cubic-bezier(0.22, 1, 0.36, 1);
+    }
+
+    /* Cuando el JS detecta el scroll y añade .visible al contenedor, la línea crece */
+    .visible h2::after, .visible h2::after {
+        width: 150px; /* Se expande dándole un toque súper profesional */
     }
 
     p {
@@ -118,11 +141,13 @@
 
     .bg-white {
         background-color: #ffffff;
-        border-radius: 12px;
-        padding: 50px 60px; /* Aumentamos el espacio interior horizontal */
-        box-shadow: 0 4px 10px rgba(0,0,0,0.05);
-        margin: 40px auto; /* Asegura que la caja se centre */
-        max-width: 850px; /* Le da un tope de ancho muy limpio */
+        border-radius: 15px; /* Bordes un poco más suaves */
+        padding: 50px 60px;
+        /* Sombra premium: múltiple capa para dar efecto 3D ultra suave */
+        box-shadow: 0 10px 30px rgba(45, 55, 29, 0.05), 0 1px 3px rgba(0,0,0,0.02);
+        border: 1px solid rgba(237, 231, 212, 0.6); /* Un borde casi invisible para dar textura */
+        margin: 40px auto; 
+        max-width: 850px; 
     }
 
     /* Listas y viñetas */
@@ -257,6 +282,17 @@
         box-shadow: 0 8px 20px rgba(69, 44, 41, 0.1);
     }
 
+    /* =========================================
+       INTERACTIVIDAD EN IMÁGENES
+       ========================================= */
+    .img-hero, .img-autoridad {
+        transition: transform 0.5s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.5s ease;
+    }
+
+    .img-hero:hover, .img-autoridad:hover {
+        transform: translateY(-8px) scale(1.02);
+        box-shadow: 0 15px 35px rgba(140, 46, 102, 0.2); /* Sombra con el tono magenta para armonizar */
+    }
     /* =========================================
        EFECTOS VISUALES Y ANIMACIONES (NUEVO)
        ========================================= */
