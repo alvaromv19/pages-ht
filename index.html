@@ -117,21 +117,6 @@
             background-color: var(--bg-pink);
         }
 
-        .bg-white {
-            background-color: #ffffff;
-            border-radius: 12px;
-            padding: 40px 20px;
-            box-shadow: 0 4px 10px rgba(0,0,0,0.05);
-            margin: 40px 0;
-        }
-
-        /* Listas y viñetas */
-        .bullet-list {
-            list-style: none;
-            margin: 20px 0;
-            text-align: left;
-        }
-
         .bullet-list li {
             margin-bottom: 15px;
             padding-left: 35px;
@@ -139,6 +124,38 @@
             font-weight: 500;
         }
 
+            /* 1. Ajuste para darle más anchura y respiración a la caja blanca */
+.bg-white {
+    background-color: #ffffff;
+    border-radius: 12px;
+    padding: 50px 60px; /* Aumentamos el espacio interior horizontal para que no se pegue al borde */
+    box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+    margin: 40px auto; /* Asegura que la caja se centre */
+    max-width: 850px; /* Le da un tope de ancho muy limpio */
+}
+
+/* 2. Ajuste para centrar la lista de "Este recetario es para ti si..." */
+.bullet-list {
+    list-style: none;
+    margin: 30px auto; /* 'auto' centra el bloque completo en medio de la pantalla */
+    max-width: 700px; /* Restringe el ancho para que el texto no se estire de extremo a extremo */
+    text-align: left; /* Mantiene la viñeta fácil de leer */
+}
+
+/* 3. Ajuste para centrar el bloque de Preguntas Frecuentes */
+.faq-container {
+    max-width: 750px; /* Controla el ancho del acordeón */
+    margin: 0 auto; /* Centra todo el acordeón perfectamente debajo del título */
+}
+
+/* 4. Ajuste responsivo: Añade esto DENTRO de tu @media (max-width: 600px) 
+      para que en móviles no quede demasiado apretado por el nuevo padding */
+@media (max-width: 600px) {
+    .bg-white {
+        padding: 30px 20px; /* Restaura el padding pequeño para celulares */
+    }
+}
+        
         .bullet-list li::before {
             content: '✔';
             position: absolute;
