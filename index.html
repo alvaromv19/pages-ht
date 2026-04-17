@@ -1,1 +1,359 @@
-prueba
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recetario Pan Sin Gluten | Chef Jenny Camacho</title>
+    
+    <style>
+        /* =========================================
+           VARIABLES DE COLOR Y ESTILOS BASE
+           ========================================= */
+        :root {
+            --bg-cream: #ede7d4;
+            --bg-pink: #f6ccda;
+            --text-dark: #452c29;
+            --heading-green: #2d371d;
+            --accent-lime: #d8df80;
+            --cta-magenta: #8c2e66;
+            --cta-hover: #702552;
+            
+            --font-main: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: var(--font-main);
+            background-color: var(--bg-cream);
+            color: var(--text-dark);
+            line-height: 1.6;
+            font-size: 16px;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 8px;
+        }
+
+        /* =========================================
+           TIPOGRAFÍA
+           ========================================= */
+        h1, h2, h3 {
+            color: var(--heading-green);
+            line-height: 1.2;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            font-weight: 800;
+            text-transform: uppercase;
+        }
+
+        h2 {
+            font-size: 2rem;
+            margin-top: 40px;
+        }
+
+        p {
+            margin-bottom: 15px;
+            text-align: center;
+        }
+
+        /* =========================================
+           BOTONES (CTA)
+           ========================================= */
+        .btn {
+            display: block;
+            width: 100%;
+            max-width: 400px;
+            margin: 30px auto;
+            padding: 18px 20px;
+            background-color: var(--cta-magenta);
+            color: #ffffff;
+            text-align: center;
+            text-decoration: none;
+            font-size: 1.2rem;
+            font-weight: bold;
+            border-radius: 50px;
+            text-transform: uppercase;
+            box-shadow: 0 6px 15px rgba(140, 46, 102, 0.4);
+            transition: all 0.3s ease;
+            animation: pulse 2s infinite;
+        }
+
+        .btn:hover {
+            background-color: var(--cta-hover);
+            transform: translateY(-2px);
+        }
+
+        @keyframes pulse {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.02); }
+            100% { transform: scale(1); }
+        }
+
+        /* =========================================
+           SECCIONES
+           ========================================= */
+        section {
+            padding: 60px 0;
+        }
+
+        .bg-pink {
+            background-color: var(--bg-pink);
+        }
+
+        .bg-white {
+            background-color: #ffffff;
+            border-radius: 12px;
+            padding: 40px 20px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+            margin: 40px 0;
+        }
+
+        /* Listas y viñetas */
+        .bullet-list {
+            list-style: none;
+            margin: 20px 0;
+            text-align: left;
+        }
+
+        .bullet-list li {
+            margin-bottom: 15px;
+            padding-left: 35px;
+            position: relative;
+            font-weight: 500;
+        }
+
+        .bullet-list li::before {
+            content: '✔';
+            position: absolute;
+            left: 0;
+            top: 0;
+            color: var(--heading-green);
+            background-color: var(--accent-lime);
+            width: 24px;
+            height: 24px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 14px;
+        }
+
+        /* Tabla de Precios/Bonos */
+        .price-box {
+            border: 3px solid var(--accent-lime);
+            border-radius: 12px;
+            padding: 30px;
+            text-align: center;
+            background: #fff;
+        }
+
+        .price-box .old-price {
+            text-decoration: line-through;
+            color: #888;
+            font-size: 1.5rem;
+        }
+
+        .price-box .new-price {
+            color: var(--cta-magenta);
+            font-size: 3.5rem;
+            font-weight: 900;
+            line-height: 1;
+            margin: 10px 0;
+        }
+
+        /* Acordeón FAQ */
+        .faq-item {
+            border-bottom: 1px solid #ccc;
+            margin-bottom: 10px;
+        }
+        .faq-question {
+            width: 100%;
+            text-align: left;
+            padding: 15px 0;
+            background: none;
+            border: none;
+            font-size: 1.1rem;
+            font-weight: bold;
+            color: var(--heading-green);
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+        }
+        .faq-answer {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease;
+            text-align: left;
+        }
+        .faq-answer p {
+            padding-bottom: 15px;
+            text-align: left;
+        }
+    </style>
+</head>
+<body>
+
+    <header class="container" style="padding-top: 60px; padding-bottom: 40px;">
+        <h1>PAN SIN GLUTEN QUE SÍ SE ANTOJA</h1>
+        <p style="font-size: 1.2rem; margin-bottom: 30px;">Un recetario saludable para preparar en casa opciones dulces, horneadas y prácticas que sí dan ganas de comer, compartir y repetir.</p>
+        
+        <div style="text-align: center; margin-bottom: 20px;">
+            <img src="URL_IMAGEN_JENNY_CAFE.jpg" alt="Chef Jenny Camacho disfrutando un postre" style="max-width: 100%; border-radius: 12px;">
+        </div>
+        
+        <p style="font-weight: bold; font-size: 1.2rem; color: var(--cta-magenta);">Más disfrute. Más variedad. Más posibilidades en casa.</p>
+    </header>
+
+    <section class="bg-pink">
+        <div class="container bg-white">
+            <h2>ESTE RECETARIO ES PARA TI SI…</h2>
+            <ul class="bullet-list">
+                <li>Has intentado mil recetas y terminas con un pan duro que nadie en la mesa quiere tocar.</li>
+                <li>Te rehúsas a elegir entre salud y placer, porque sabes que mereces comer algo que te haga bien al cuerpo pero que también te haga sonreír al primer bocado.</li>
+                <li>Sientes que tu dieta es aburrida y repetitiva, y te urge dejar de comer siempre lo mismo para descubrir un universo de sabores dulces y horneados que no parecen "de dieta".</li>
+                <li>Estás cansada de las harinas que parecen cartón y sueñas con morder un pan que sea suave, real y que sí se sienta como un premio después de un largo día.</li>
+                <li>Te gusta la idea de tener dulces, panes y desayunos dentro de un mismo universo sin gluten.</li>
+            </ul>
+        </div>
+    </section>
+
+    <section class="container">
+        <h2>LO QUE ENCUENTRAS DENTRO DEL RECETARIO</h2>
+        <p>No solo aprenderás a cocinar para ti; aprenderás a poner un pan en la mesa que toda tu familia quiera comer, aunque ellos no tengan restricciones alimentarias.</p>
+        
+        <div class="bg-white" style="border-top: 8px solid var(--accent-lime);">
+            <h3 style="text-align: left;">🥐 Recetas de Panadería Dulce</h3>
+            <p style="text-align: left;">El placer de volver a comer un rol de canela caliente: Roles de canela, Pan relleno de chocolate, Donas.</p>
+            
+            <h3 style="text-align: left; margin-top: 20px;">🍞 Base de Panes Salados</h3>
+            <p style="text-align: left;">Tu solución definitiva para sándwiches y desayunos: Pan maíz auyama, Pan nube, Pan mini baguette, Pan molde linaza, Pan yuca, Pan mogolla.</p>
+            
+            <h3 style="text-align: left; margin-top: 20px;">🧁 Extras y Desayunos</h3>
+            <p style="text-align: left;">El sistema para no volver a aburrirte en la cocina: Cupcakes pollitos de Pascua, Mini pizzas dulces, Galletas de zapallo con chips, Batido de aguacate, Jugo verde, Arepa de zanahoria con chía.</p>
+        </div>
+    </section>
+
+    <section class="bg-pink">
+        <div class="container">
+            <h2>PERO ESO NO ES TODO, MIRA ESTOS BONOS EXCLUSIVOS PARA HOY</h2>
+            
+            <div class="bg-white">
+                <h3 style="color: var(--cta-magenta);">🎁 Bono 1: Planificador Semanal Sin Gluten</h3>
+                <p>Organiza tus horneados en 1 hora. Ideal si sientes que no tienes tiempo.</p>
+                
+                <h3 style="color: var(--cta-magenta); margin-top: 30px;">🎁 Bono 2: Video-Clase Especial</h3>
+                <p>El secreto para que tus preparaciones queden perfectas siempre, perdiendo el miedo a fallar.</p>
+            </div>
+
+            <div class="price-box">
+                <p>VALOR TOTAL SI LO ADQUIRIERAS TODO POR SEPARADO: <span class="old-price">$127 USD</span></p>
+                <p style="margin-top: 15px; font-weight: bold;">PERO HOY PUEDES LLEVÁRTELO POR</p>
+                <div class="new-price">$3 USD</div>
+                <p style="font-weight: bold;">(ACCESO DE POR VIDA)</p>
+                
+                <p style="margin-top: 20px; font-style: italic;">“Quiero que el costo no sea una barrera para que vuelvas a disfrutar del pan en tu mesa. Este es mi regalo para que conozcas mi método.”</p>
+                
+                <a href="#link-de-pago" class="btn">SÍ, QUIERO ENTRAR HOY</a>
+            </div>
+        </div>
+    </section>
+
+    <section class="container text-center">
+        <h2>🛡️ GARANTÍA INCONDICIONAL</h2>
+        <p>Tienes 7 días para probar estas recetas. Si sientes que el pan no queda suave, que las opciones no son deliciosas o simplemente no es lo que esperabas, te devolvemos el 100% de tu dinero. Sin preguntas.</p>
+    </section>
+
+    <section class="bg-pink">
+        <div class="container bg-white">
+            <h2>¿CON QUIÉN VAS A APRENDER?</h2>
+            <div style="text-align: center; margin-bottom: 20px;">
+                <img src="URL_IMAGEN_JENNY_COCINA.jpg" alt="Chef Jenny Camacho en la cocina">
+            </div>
+            <p><strong>¡Hola! Soy Jenny Camacho</strong></p>
+            <p>Nací en Venezuela y desde chica descubrí mi amor por la cocina. Al mudarme a Colombia, enfrenté desafíos que fortalecieron mi enfoque: llevar salud a través de postres.</p>
+            <p>Me especialicé en pastelería saludable y, tras más de 10 años de experiencia, fundé Xocolat And More... Hoy es una cadena que demuestra que lo delicioso también puede ser nutritivo.</p>
+            <p>Pero esta misión también es personal. Mi papá vive con diabetes, mi hijo luchó con sobrepeso y yo misma enfrenté el cáncer de mama. Todo esto me dio una visión clara: comer bien puede cambiarte la vida.</p>
+            <p>Mujeres que le decimos con orgullo sí es posible disfrutar sin culpa, cuidar nuestra salud y compartirlo con quienes amamos.</p>
+            
+            <a href="#link-de-pago" class="btn">¡ESTOY LISTA PARA COCINAR SALUDABLE SIN FALLAR DESDE HOY!</a>
+        </div>
+    </section>
+
+    <section class="container">
+        <h2>PREGUNTAS FRECUENTES</h2>
+        
+        <div class="faq-container">
+            <div class="faq-item">
+                <button class="faq-question">¿Este recetario es digital? <span>+</span></button>
+                <div class="faq-answer">
+                    <p>Sí, es un producto 100% digital. Recibirás el acceso a tu correo electrónico inmediatamente después de la compra.</p>
+                </div>
+            </div>
+            <div class="faq-item">
+                <button class="faq-question">¿Por cuánto tiempo lo tendré? <span>+</span></button>
+                <div class="faq-answer">
+                    <p>¡El acceso es de por vida! Podrás consultarlo siempre que quieras, desde cualquier dispositivo.</p>
+                </div>
+            </div>
+            <div class="faq-item">
+                <button class="faq-question">¿Necesito experiencia previa? <span>+</span></button>
+                <div class="faq-answer">
+                    <p>No, las recetas están explicadas paso a paso para que cualquier persona pueda lograr resultados deliciosos en casa.</p>
+                </div>
+            </div>
+            <div class="faq-item">
+                <button class="faq-question">¿Los ingredientes son fáciles de conseguir? <span>+</span></button>
+                <div class="faq-answer">
+                    <p>Absolutamente. Utilizamos ingredientes accesibles que puedes encontrar en supermercados o tiendas naturales locales.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="bg-pink" style="padding: 60px 0; text-align: center;">
+        <div class="container">
+            <h2 style="margin-top: 0;">Pan sin gluten que sí se antoja.</h2>
+            <p style="font-size: 1.2rem; font-weight: bold;">Hecho para disfrutar en casa.</p>
+            <a href="#link-de-pago" class="btn">SÍ, QUIERO MI RECETARIO</a>
+        </div>
+    </footer>
+
+    <script>
+        document.querySelectorAll('.faq-question').forEach(button => {
+            button.addEventListener('click', () => {
+                const answer = button.nextElementSibling;
+                const icon = button.querySelector('span');
+                
+                if (answer.style.maxHeight) {
+                    answer.style.maxHeight = null;
+                    icon.textContent = '+';
+                } else {
+                    // Cierra los demás
+                    document.querySelectorAll('.faq-answer').forEach(ans => ans.style.maxHeight = null);
+                    document.querySelectorAll('.faq-question span').forEach(icn => icn.textContent = '+');
+                    
+                    answer.style.maxHeight = answer.scrollHeight + 'px';
+                    icon.textContent = '-';
+                }
+            });
+        });
+    </script>
+</body>
+</html>
