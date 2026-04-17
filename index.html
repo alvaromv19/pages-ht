@@ -355,6 +355,115 @@
         opacity: 1;
         transform: translateY(0);
     }
+
+    /* =========================================
+       DISEÑO DE CAJA DE OFERTA PREMIUM (NUEVO)
+       ========================================= */
+    .offer-showcase {
+        display: flex;
+        flex-wrap: wrap;
+        background: #fff;
+        border-radius: 20px;
+        overflow: hidden;
+        box-shadow: 0 15px 40px rgba(45, 55, 29, 0.1);
+        border: 2px solid var(--accent-lime);
+        margin: 40px auto;
+        max-width: 900px;
+    }
+
+    .offer-details {
+        flex: 1 1 500px;
+        padding: 40px;
+        background-color: #ffffff;
+    }
+
+    .offer-price {
+        flex: 1 1 300px;
+        background: linear-gradient(135deg, var(--bg-pink) 0%, #f9e0e8 100%);
+        padding: 50px 40px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        border-left: 2px dashed rgba(140, 46, 102, 0.2);
+    }
+
+    .offer-title {
+        font-size: 1.6rem;
+        color: var(--text-dark);
+        text-align: left;
+        margin-bottom: 25px;
+        line-height: 1.3;
+    }
+
+    .offer-list {
+        list-style: none;
+        margin-bottom: 30px;
+    }
+
+    .offer-list li {
+        margin-bottom: 12px;
+        padding-left: 30px;
+        position: relative;
+        font-size: 1rem;
+        text-align: left;
+        color: var(--text-dark);
+    }
+
+    .offer-list li::before {
+        content: '✅';
+        position: absolute;
+        left: 0;
+        top: 2px;
+        font-size: 1.1rem;
+    }
+
+    .offer-guarantee-text {
+        font-weight: 600;
+        color: var(--heading-green);
+        background: #fcfbf8;
+        padding: 15px 20px;
+        border-left: 5px solid var(--accent-lime);
+        border-radius: 0 8px 8px 0;
+        font-size: 0.95rem;
+        text-align: left;
+    }
+
+    .offer-price .old-price {
+        text-decoration: line-through;
+        color: #888;
+        font-size: 1.3rem;
+        font-weight: bold;
+        margin-bottom: 5px;
+    }
+
+    .offer-price .new-price-label {
+        font-size: 1rem;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        color: var(--heading-green);
+        font-weight: bold;
+    }
+
+    .offer-price .new-price {
+        color: var(--cta-magenta);
+        font-size: 4rem;
+        font-weight: 900;
+        line-height: 1;
+        margin: 5px 0 20px 0;
+        text-shadow: 2px 2px 0px #fff;
+    }
+
+    /* Ajuste para que en móviles la caja se apile (una columna) */
+    @media (max-width: 768px) {
+        .offer-showcase {
+            flex-direction: column;
+        }
+        .offer-price {
+            border-left: none;
+            border-top: 2px dashed rgba(140, 46, 102, 0.2);
+        }
+    }
     /* =========================================
        AJUSTES RESPONSIVOS (MÓVILES)
        ========================================= */
@@ -420,24 +529,39 @@
         </div>
     </section>
 
-    <section class="bg-pink"> <div class="container"> <h2 class="fade-in">PERO ESO NO ES TODO, MIRA ESTOS BONOS EXCLUSIVOS PARA HOY</h2>
+    <section class="bg-pink">
+        <div class="container fade-in">
+            <h2>MIRA TODO LO QUE TE LLEVAS HOY</h2>
             
-            <div class="bg-white fade-in">
-                <h3 style="color: var(--cta-magenta);">🎁 Bono 1: Planificador Semanal Sin Gluten</h3>
-                <p><span class="highlight">Organiza tus horneados en 1 hora.</span> Ideal si sientes que no tienes tiempo en tu día a día.</p>
-                <h3 style="color: var(--cta-magenta); margin-top: 30px;">🎁 Bono 2: Video-Clase Especial</h3>
-                <p><strong>El secreto para que tus preparaciones queden perfectas siempre.</strong> Pierde el miedo a fallar con las masas sin gluten.</p>
+            <div class="offer-showcase">
+                <div class="offer-details">
+                    <h3 class="offer-title">Únete hoy a la <strong>Comunidad Saludable</strong> con el <span class="highlight">70% de dcto</span> al Recetario de Panadería Saludable #1</h3>
+                    
+                    <ul class="offer-list">
+                        <li><strong>Recetario Panes Sin Gluten</strong> (+9 recetas técnicas con mi método)</li>
+                        <li><strong>Taller Grabado:</strong> Galletas New York Saludables 🍪</li>
+                        <li><strong>Taller Grabado:</strong> Brownie Melcochudo Sin Gluten 🍫</li>
+                        <li><strong>Guía Planificador Semanal PDF</strong> (Organiza tu semana saludable)</li>
+                        <li><strong>Pack Desayunos Express</strong> (3 recetas funcionales y rápidas)</li>
+                        <li><strong>Especial "Consiente a los peques"</strong> (3 recetas infantiles nutritivas)</li>
+                        <li><strong>Anotador Personal de la Chef</strong> (Para tus ajustes técnicos)</li>
+                        <li>Acceso a la <strong>Comunidad VIP en WhatsApp</strong></li>
+                    </ul>
+
+                    <div class="offer-guarantee-text">
+                        Logra panes <strong>elásticos y esponjosos</strong>, con técnica profesional y <strong>sin desperdiciar ingredientes.</strong>
+                    </div>
                 </div>
 
-            <div class="price-box fade-in">
-                <p>VALOR TOTAL SI LO ADQUIRIERAS TODO POR SEPARADO: <span class="old-price">$127 USD</span></p>
-                <p style="margin-top: 15px; font-weight: bold;">PERO HOY PUEDES LLEVÁRTELO POR</p>
-                <div class="new-price">$3 USD</div>
-                <p style="font-weight: bold;">(ACCESO DE POR VIDA)</p>
-                
-                <p style="margin-top: 20px; font-style: italic; color: var(--cta-hover);">“Quiero que el costo no sea una barrera para que vuelvas a disfrutar del pan en tu mesa. Este es mi regalo para que conozcas mi método.”</p>
-                
-                <a href="https://pay.hotmart.com/G98467263V?off=7hzvwmhg&checkoutMode=10" class="btn">SÍ, QUIERO ENTRAR HOY</a>
+                <div class="offer-price">
+                    <div class="old-price">Valor total: $127 USD</div>
+                    <div class="new-price-label">SOLO POR</div>
+                    <div class="new-price">$3 USD</div>
+                    
+                    <a href="https://pay.hotmart.com/G98467263V?off=7hzvwmhg&checkoutMode=10" class="btn" style="margin: 10px auto; max-width: 100%; font-size: 1.1rem; padding: 15px; animation: pulse 2s infinite;">SÍ, QUIERO ENTRAR HOY</a>
+                    
+                    <p style="font-size: 0.85rem; margin-top: 15px; color: var(--text-dark); opacity: 0.8; font-weight: bold;">Acceso Inmediato y De Por Vida</p>
+                </div>
             </div>
         </div>
     </section>
@@ -517,12 +641,12 @@
     <footer style="padding: 60px 0; text-align: center;">
         <div class="container">
             <div style="margin-bottom: 40px;">
-                <p style="font-style: italic; color: #888;">[ Aquí puedes añadir más imágenes de resultados / capturas ]</p>
+                <p style="font-style: italic; color: #888;">[ Falta añadir más imágenes de resultados / capturas ]</p>
             </div>
 
             <h2 style="margin-top: 0; color: var(--cta-magenta); font-size: 2.5rem;">Pan sin gluten que sí se antoja.</h2>
             <p style="font-size: 1.5rem; font-weight: bold;">Hecho para disfrutar en casa.</p>
-            <a href="#link-de-pago" class="btn" style="margin-top: 40px;">SÍ, QUIERO MI RECETARIO</a>
+            <a href="https://pay.hotmart.com/G98467263V?off=7hzvwmhg&checkoutMode=10" class="btn" style="margin-top: 40px;">SÍ, QUIERO MI RECETARIO</a>
             
             <p style="margin-top: 40px; font-size: 0.8rem; color: #888;">&copy; 2026 Chef Jenny Camacho. Todos los derechos reservados.</p>
         </div>
