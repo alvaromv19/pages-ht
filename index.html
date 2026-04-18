@@ -464,6 +464,44 @@
             border-top: 2px dashed rgba(140, 46, 102, 0.2);
         }
     }
+
+    /* =========================================
+       GALERÍA DE RESULTADOS (NUEVO)
+       ========================================= */
+    .results-gallery {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 25px;
+        justify-content: center;
+        margin-top: 20px;
+    }
+
+    .result-item {
+        flex: 1 1 250px; 
+        max-width: 280px;
+        border-radius: 15px;
+        overflow: hidden;
+        box-shadow: 0 10px 25px rgba(45, 55, 29, 0.1);
+        transition: transform 0.4s ease, box-shadow 0.4s ease;
+        border: 3px solid #fff; /* Le da un efecto de fotografía limpia */
+    }
+
+    .result-item:hover {
+        transform: translateY(-10px);
+        box-shadow: 0 15px 35px rgba(140, 46, 102, 0.2);
+    }
+
+    .result-img {
+        width: 100%;
+        height: 350px; /* Estandariza la altura sin importar el tamaño original */
+        object-fit: cover; /* Centra y recorta mágicamente sin deformar */
+        display: block;
+        transition: transform 0.6s ease;
+    }
+
+    .result-item:hover .result-img {
+        transform: scale(1.05); /* Pequeño zoom interno elegante al pasar el cursor */
+    }
     /* =========================================
        AJUSTES RESPONSIVOS (MÓVILES)
        ========================================= */
@@ -640,8 +678,22 @@
 
     <footer style="padding: 60px 0; text-align: center;">
         <div class="container">
-            <div style="margin-bottom: 40px;">
-                <p style="font-style: italic; color: #888;">[ Falta añadir más imágenes de resultados / capturas ]</p>
+            <div style="margin-bottom: 60px;">
+                <h2 class="fade-in" style="font-size: 2rem; margin-bottom: 30px;">RESULTADOS 100% REALES EN CASA</h2>
+                
+                <div class="results-gallery">
+                    <div class="result-item fade-in">
+                        <img src="recursos/pan-sin-gluten.png" alt="Pan sin gluten esponjoso" class="result-img">
+                    </div>
+                    
+                    <div class="result-item fade-in">
+                        <img src="recursos/donas1.png" alt="Donas saludables sin gluten" class="result-img">
+                    </div>
+                    
+                    <div class="result-item fade-in">
+                        <img src="recursos/rol-de-canela.jpeg" alt="Rol de canela delicioso" class="result-img">
+                    </div>
+                </div>
             </div>
 
             <h2 style="margin-top: 0; color: var(--cta-magenta); font-size: 2.5rem;">Pan sin gluten que sí se antoja.</h2>
