@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>¡Gracias por tu compra! | Chef Jenny Camacho</title>
+    
+    <script>
+    !function(f,b,e,v,n,t,s)
+    {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+    n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+    if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+    n.queue=[];t=b.createElement(e);t.async=!0;
+    t.src=v;s=b.getElementsByTagName(e)[0];
+    s.parentNode.insertBefore(t,s)}(window, document,'script',
+    'https://connect.facebook.net/en_US/fbevents.js');
+    fbq('init', '823271266193111');
+    fbq('track', 'PageView');
+    
+    // IMPORTANTE: Si quieres que Facebook cuente esto como una COMPRA, 
+    // quita las dos barras "//" de la siguiente línea:
+    // fbq('track', 'Purchase', {value: 3.00, currency: 'USD'});
+    </script>
+    <noscript><img height="1" width="1" style="display:none"
+    src="https://www.facebook.com/tr?id=823271266193111&ev=PageView&noscript=1"
+    /></noscript>
+    <style>
+        /* =========================================
+           VARIABLES DE COLOR Y ESTILOS BASE
+           ========================================= */
+        :root {
+            --bg-cream: #ede7d4;
+            --bg-pink: #f6ccda;
+            --text-dark: #452c29;
+            --heading-green: #2d371d;
+            --accent-lime: #d8df80;
+            --cta-magenta: #8c2e66;
+            
+            /* Colores de WhatsApp para el botón interactivo */
+            --wpp-green: #25D366;
+            --wpp-hover: #128C7E;
+
+            --font-main: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            --font-serif: 'Playfair Display', Georgia, serif;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: var(--font-main);
+            background-color: var(--text-dark); /* El fondo oscuro elegante de la imagen */
+            color: var(--bg-cream); /* Texto en color crema para contraste perfecto */
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+            text-align: center;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 800px;
+            padding: 40px;
+            animation: fadeIn 1s ease-out;
+        }
+
+        /* =========================================
+           TIPOGRAFÍA Y COPY
+           ========================================= */
+        h1 {
+            font-family: var(--font-serif); /* Usamos serif para replicar la elegancia de la imagen */
+            font-size: 4rem;
+            color: #ffffff;
+            margin-bottom: 25px;
+            font-weight: 700;
+            letter-spacing: 1px;
+            text-shadow: 0 4px 15px rgba(0,0,0,0.2);
+        }
+
+        p {
+            font-size: 1.3rem;
+            margin-bottom: 20px;
+            line-height: 1.6;
+            color: #fcfbf8;
+        }
+
+        .alert-text {
+            text-transform: uppercase;
+            font-weight: bold;
+            letter-spacing: 2px;
+            margin: 40px 0;
+            font-size: 1.15rem;
+            color: #ffffff;
+        }
+
+        .footer-text {
+            font-size: 1.1rem;
+            opacity: 0.9;
+            margin-top: 20px;
+            font-style: italic;
+        }
+
+        /* =========================================
+           BOTÓN WHATSAPP PREMIUM
+           ========================================= */
+        .btn-wpp {
+            display: inline-block;
+            width: 100%;
+            max-width: 450px;
+            background-color: #ffffff;
+            color: var(--text-dark);
+            text-decoration: none;
+            padding: 22px 20px;
+            font-size: 1.4rem;
+            font-weight: 900;
+            border-radius: 8px; /* Rectangular como en la imagen, pero con borde suave */
+            margin: 20px 0;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.3);
+            transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            animation: pulse-wpp 2.5s infinite;
+        }
+
+        /* Efecto al pasar el cursor: Se vuelve Verde WhatsApp y se eleva */
+        .btn-wpp:hover {
+            transform: translateY(-5px);
+            background-color: var(--wpp-green);
+            color: #ffffff;
+            box-shadow: 0 15px 35px rgba(37, 211, 102, 0.4);
+            border-radius: 50px; /* Se transforma en píldora al hacer hover (microinteracción premium) */
+        }
+
+        /* =========================================
+           ANIMACIONES
+           ========================================= */
+        @keyframes fadeIn {
+            0% { opacity: 0; transform: translateY(30px); }
+            100% { opacity: 1; transform: translateY(0); }
+        }
+
+        @keyframes pulse-wpp {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.03); }
+            100% { transform: scale(1); }
+        }
+
+        /* =========================================
+           RESPONSIVE (MÓVILES)
+           ========================================= */
+        @media (max-width: 600px) {
+            h1 { font-size: 2.8rem; }
+            p { font-size: 1.1rem; }
+            .alert-text { font-size: 1rem; margin: 30px 0; }
+            .btn-wpp { font-size: 1.2rem; padding: 18px 15px; }
+            .container { padding: 20px; }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h1>¡Gracias por tu compra!</h1>
+        
+        <p>En breve, recibirás un correo con el acceso directo al recetario...</p>
+        
+        <p class="alert-text">PERO... ¡FALTA UN PASO MÁS! 🚨 ES MUY IMPORTANTE 🚨</p>
+        
+        <p>Debes unirte ahora al grupo de WhatsApp llamado "Comunidad By Jenny Camacho" en el siguiente enlace de aqui abajo...</p>
+        
+        <a href="https://chat.whatsapp.com/CSZ720eXEaO0c3PB3FD3hE?mode=gi_t" class="btn-wpp">
+            ¡UNIRME AL GRUPO DE WHATSAPP!
+        </a>
+        
+        <p class="footer-text">Aqui vas a recibir tips, secretos, consejos y mucho más...</p>
+    </div>
+
+</body>
+</html>
